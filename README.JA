@@ -1,0 +1,42 @@
+Request-StackAPI.ps1  version 1.0
+====================================================================================
+1. はじめに
+このスクリプトはCloudStack APIにアクセスするためのサンプルスクリプトです。
+
+CloudStack APIの詳細については下記URLを参照してください。 
+
+ API Reference Guide
+<http://docs.cloud.com/CloudStack_Documentation/API_Reference%3A_CloudStack>
+
+ Developer's Guide: CloudStack
+<http://cloud.mindtouch.us/CloudStack_Documentation/Developer's_Guide%3A_CloudStack>
+
+
+2. 依存関係
+このスクリプトはWindows Server 2008 R2 SP1上のPowershell v2.0でテストしています。
+.NET Framework 2.0以上が必要となります。
+
+
+3. 著作権およびライセンス
+
+Copyright (C) 2011 by Takashi Kanai<anikundesu@gmail.com , @anikundesu>
+
+本スクリプトは商用・非商用に関わり無く自由に利用する事ができます。
+なお、テストは実施していますが、エラーチェックなどは実装しておらず、
+したがって利用した結果についてはいかなる保証もいたしません。
+
+====================================================================================
+補足1. 利用する際の注意事項
+
+基本的にスクリプトの引数にAPIのコマンドおよびパラメータをスペース区切りで
+渡せば実行可能です。(引数の順番は問いません)
+
+本スクリプトでは以下の実装をしています。
+・APIを実行できた場合は応答をXML形式で受け取り、PowershellのXMLオブジェクトとして
+　返します。
+・APIを実行できなかった場合はPowershellで401エラーが発生します。
+・APIのコマンドは正しいが引数が正しくない場合は500エラーが発生する場合があります。
+
+引数でcommand=や各引数を渡すとき、"command="やパラメータ名は『小文字』で
+入力してください。また、APIコマンド名はReference Guide記載のとおり(大文字・小文字を
+区別して)入力してください。

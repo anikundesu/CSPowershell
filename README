@@ -1,6 +1,6 @@
-generate-url.pl  version 1.0
+Request-StackAPI.ps1  version 1.0
 ===========================
-This is a sample program to generate URL with CloudStack API.
+This is a sample program to Access CloudStack API.
 
 Please refer to the following for detailsÅ@CloudStack API. 
 
